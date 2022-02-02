@@ -1,4 +1,11 @@
 <x-app-layout>
+    <script>
+        var msg = '{{Session::get('alert')}}';
+        var exist = '{{Session::has('alert')}}';
+        if(exist){
+          alert(msg);
+        }
+      </script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
 
