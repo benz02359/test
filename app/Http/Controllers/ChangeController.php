@@ -11,9 +11,19 @@ class ChangeController extends Controller
     }
 
     public function change(Request $request){
+        $money = $request->input('money');
+        $price =$request->input('price');
+        $error = $money - $price;
+        if($error <0 ){
+
+            return redirect()->back()->with('alert','จำนวนเงินไม่ถูกต้อง');
+
+        }else{
+
         $request->validate([
             'money'=>'required|numeric',
             'price'=>'required|numeric',
+
             ],
             [
                 'money.required'=>"Please enter Numbers",
@@ -49,6 +59,7 @@ class ChangeController extends Controller
         }
         //dd($change);
         return view('change.cal')->with('change',$change);
+    }
 
     }
 }

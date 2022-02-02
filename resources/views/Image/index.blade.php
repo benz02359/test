@@ -29,10 +29,6 @@
                             <tr>
                                 <th>{{$images->firstItem()+$loop->index}}</th>
                                 <td><img src="{{$row->image_name}}" alt="" width="100px" height="100px"></td>
-                                <td>
-                                    <a href="{{url('/image/delete/'.$row->id)}}" class="btn btn-warning"
-                                        onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
-                                </td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -1,4 +1,11 @@
 <x-app-layout>
+    <script>
+        var msg = '{{Session::get('alert')}}';
+        var exist = '{{Session::has('alert')}}';
+        if(exist){
+          alert(msg);
+        }
+      </script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
 
@@ -11,8 +18,13 @@
             <div class="card-body">
                 <form action="{{ route('changecal') }}" method="post">
                     @csrf
+                    @error('error')
+                    <div class="my-2">
+                        <span class="text-danger my-2">{{$message}}</span>
+                    </div>
+                    @enderror
                     <div class="form-group">
-                        <label for="money">Amount</label>
+                        <label for="money">Your Money</label>
                         <input type="number" class="form-control" name="money">
                     </div>
                     @error('money')
@@ -22,7 +34,7 @@
                     @enderror
                     <br>
                     <div class="form-group">
-                        <label for="price">Price</label>
+                        <label for="price">Total Price</label>
                         <input type="number" class="form-control" name="price">
                     </div>
                     @error('price')

@@ -12,7 +12,7 @@
                 <form action="{{ route('cal') }}" method="post">
                     @csrf
                     <div class="form-group">
-                        <label for="mymoney">Amount</label>
+                        <label for="mymoney">Your Money</label>
                         <input type="text" class="form-control" name="mymoney">
                     </div>
                     @error('mymoney')
