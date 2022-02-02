@@ -4,7 +4,7 @@ node.js https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi <br>
 <br>
 เปิด command line
 แล้วรัน composer global update<br>
-ทำการ start Apache และ MySql <br>
+เปิด xampp ทำการ start Apache และ MySql  <br>
 <br>
 นำโฟลเดอร์ test ไปไว้ใน xampp/htdoc
 สร้าง database ชื่อ test
