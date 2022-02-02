@@ -12,6 +12,12 @@ class CalculatorController extends Controller
 
     public function cal(Request $request){
         $mymoney = $request->input('mymoney');
+        $error = $mymoney;
+        if($error <0 ){
+
+            return redirect()->back()->with('alert','จำนวนเงินไม่ถูกต้อง');
+
+        }else{
         $shop1 = intval($mymoney/25);
         $totalprice1= intval($shop1*25);
         $change1 = intval($mymoney-$totalprice1);
@@ -39,6 +45,6 @@ class CalculatorController extends Controller
             แนะนำให้ซื้อร้านที่ 2 จะคุ้มที่สุด");
         }
 
-        return view('Calculator.calculator')->with('arr',$arr);
+        return view('Calculator.calculator')->with('arr',$arr);}
     }
 }

@@ -48,6 +48,13 @@
         });
         });
         </script>
+        <script>
+            var msg = '{{Session::get('alert')}}';
+            var exist = '{{Session::has('alert')}}';
+            if(exist){
+              alert(msg);
+            }
+          </script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
