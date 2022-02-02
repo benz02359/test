@@ -27,11 +27,6 @@
                         <span class="text-danger my-2">{{$message}}</span>
                     </div>
                     @enderror
-                    @error('mymoney')
-                    <div class="my-2">
-                        <span class="text-danger my-2">{{$message}}</span>
-                    </div>
-                    @enderror
                     <br>
                     <input type="submit" value="Calculation" class="btn btn-primary">
                 </form>
