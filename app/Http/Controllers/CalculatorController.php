@@ -39,6 +39,9 @@ class CalculatorController extends Controller
             ซื้อร้านที่2 ได้ $shop2 ชิ้น เหลือเงิน $change2 บาท \n
             แนะนำให้ซื้อร้านที่ 1 จะคุ้มที่สุด");
         }
+        elseif ($mymoney <25){
+            return redirect()->back()->with('error','จำนวนเงินไม่พอ');
+        }
         else {
             $arr = array("จำนวนเงิน $mymoney บาท ซื้อร้านที่1 ได้ $shop1 ชิ้น เหลือเงิน $change1 บาท\n
             ซื้อร้านที่2 ได้ $shop2 ชิ้น เหลือเงิน $change2 บาท \n
