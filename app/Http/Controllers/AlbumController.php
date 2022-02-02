@@ -116,7 +116,24 @@ class AlbumController extends Controller
         );
         $update = Album::find($id)->update([
                     'album_name'=>$request->album_name,
+                    'category_id' =>$request->category_id,
                 ]);
+                $tags = $request->tag;
+                $tagNames = [];
+
+                if (!empty($tags)) {
+                foreach ($tags as $tagName)
+                {
+                $tag = Tag::firstOrCreate(['tag_name'=>$tagName]);
+                if($tag)
+                {
+                $tagNames[] = $tag->id;
+                }
+                }
+                $update->tags()->syncWithoutDetaching($tagNames);
+                }
+
+
         return redirect()->route('album')->with('success','Submit Successful');
     }
 
