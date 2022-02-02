@@ -15,6 +15,11 @@
                         <label for="mymoney">Your Money</label>
                         <input type="text" class="form-control" name="mymoney">
                     </div>
+                    @error('error')
+                    <div class="my-2">
+                        <span class="text-danger my-2">{{$message}}</span>
+                    </div>
+                    @enderror
                     @error('mymoney')
                     <div class="my-2">
                         <span class="text-danger my-2">{{$message}}</span>
