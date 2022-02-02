@@ -34,8 +34,8 @@ class CalculatorController extends Controller
             แนะนำให้ซื้อร้านที่ 1 จะคุ้มที่สุด");
         }
         else {
-            $arr = array("จำนวนเงิน $mymoney บาท ซื้อร้านที่1 ได้ $shop1 ชิ้น เหลือเงิน $change1 บาท<br>
-            ซื้อร้านที่2 ได้ $shop2 ชิ้น เหลือเงิน $change2 บาท <br>
+            $arr = array("จำนวนเงิน $mymoney บาท ซื้อร้านที่1 ได้ $shop1 ชิ้น เหลือเงิน $change1 บาท\n
+            ซื้อร้านที่2 ได้ $shop2 ชิ้น เหลือเงิน $change2 บาท \n
             แนะนำให้ซื้อร้านที่ 2 จะคุ้มที่สุด");
         }
 

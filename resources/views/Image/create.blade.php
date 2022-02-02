@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header">Upload Image</div>
             <div class="card-body">
-                <form action="{{route('addimage')}}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('addimage') }}" method="post" enctype="multipart/form-data">
                     @csrf
                         <div class="form-group">
                             <label for="image_name">Image</label>
