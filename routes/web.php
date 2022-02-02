@@ -24,7 +24,8 @@ use App\Http\Controllers\CalculatorController;
     return view('welcome');
 });*/
 
-Route::get('/',[HomeController::class,'index'])->name('Home');
+//Route::get('/',[HomeController::class,'index'])->name('Home');
+Route::get('/',[AlbumController::class,'index'])->name('album');
 
 Route::get('/album',[AlbumController::class,'index'])->name('album');
 Route::get('/album/create',[AlbumController::class,'create'])->name('createalbum');
