@@ -10,6 +10,6 @@ node.js https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi <br>
 สร้าง database ชื่อ test
 ไปเปลี่ยน ชื่อไฟล์ .env.example ในโฟลเดอร์ test เป็น .env<br>
 ไปยังโฟลเดอร์ test เปิด command แล้ว run <br>
-composer global require laravel/installer <br>
+composer update --no-scripts <br>
 php artisan key:generate<br>
 php artisan migrate และ php artisan serve <br>
