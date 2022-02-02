@@ -43,12 +43,12 @@ class ImageController extends Controller
         ]);
         $image_name->move($upload_location,$img_name);
 
-        return redirect()->route('Image')->with('success','Submit Successful');
+        return redirect()->route('imageindex')->with('success','Submit Successful');
     }
     public function delete($id) {
         $img = Image::find($id);
         unlink($img);
         $delete = Image::find($id)->Delete();
-        return redirect()->route('Image')->with('success','Delete Success');
+        return redirect()->route('imageindex')->with('success','Delete Success');
     }
 }

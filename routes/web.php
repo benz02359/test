@@ -36,7 +36,7 @@ Route::get('/album/edit/{id}',[AlbumController::class,'edit']);
 Route::post('/album/update/{id}',[AlbumController::class,'update']);
 Route::get('/album/delete/{id}',[AlbumController::class,'delete']);
 
-Route::get('/imageindex',[ImageController::class,'index'])->name('image');
+Route::get('/imageindex',[ImageController::class,'index'])->name('imageindex');
 Route::get('/image/create',[ImageController::class,'create'])->name('createimage');
 Route::post('/image/add',[ImageController::class,'store'])->name('addimage');
 Route::get('/image/delete/{id}',[ImageController::class,'delete']);
