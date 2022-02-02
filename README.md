@@ -2,11 +2,11 @@
 composer https://getcomposer.org/Composer-Setup.exe <br>
 node.js https://nodejs.org/dist/v16.13.2/node-v16.13.2-x64.msi <br>
 <br>
-เปิด command line
-แล้วรัน composer global update และ composer global require laravel/installer<br>
 เปิด xampp ทำการ start Apache และ MySql  <br>
 <br>
-นำโฟลเดอร์ test ไปไว้ใน xampp/htdoc
+นำโฟลเดอร์ test ไปไว้ใน xampp/htdoc 
+เปิด command line ใน htdoc
+แล้วรัน composer global require laravel/installer<br>
 สร้าง database ชื่อ test
 ไปเปลี่ยน ชื่อไฟล์ .env.example ในโฟลเดอร์ test เป็น .env<br>
 ไปยังโฟลเดอร์ test เปิด command แล้ว run <br>
